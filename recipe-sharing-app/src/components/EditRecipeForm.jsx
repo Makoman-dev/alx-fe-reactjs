@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { useRecipeStore } from './recipeStore'; // Import the recipe store
+import { useRecipeStore } from './recipeStore';
 
 const EditRecipeForm = ({ recipe }) => {
-  const [updatedRecipe, setUpdatedRecipe] = useState(recipe); // Initialize form with existing recipe data
-  const { updateRecipe } = useRecipeStore(); // Import updateRecipe action
+  const [updatedRecipe, setUpdatedRecipe] = useState(recipe);
+  const { updateRecipe } = useRecipeStore();
 
   const handleChange = (e) => {
     setUpdatedRecipe({ ...updatedRecipe, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    updateRecipe(updatedRecipe); // Call updateRecipe action with updated recipe data
+    e.preventDefault(); // Prevent default form submission behavior
+    updateRecipe(updatedRecipe);
     // Handle successful update or display error message
   };
 

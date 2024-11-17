@@ -5,12 +5,12 @@ const EditRecipeForm = ({ recipe }) => {
   const [updatedRecipe, setUpdatedRecipe] = useState(recipe);
   const { updateRecipe } = useRecipeStore();
 
-  const handleChange = (e) => {
-    setUpdatedRecipe({ ...updatedRecipe, [e.target.name]: e.target.value });
+  const handleChange = (event) => {
+    setUpdatedRecipe({ ...updatedRecipe, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission
     updateRecipe(updatedRecipe);
     // Handle successful update or display error message
     alert('Recipe updated successfully!');

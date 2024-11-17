@@ -10,9 +10,10 @@ const EditRecipeForm = ({ recipe }) => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); // Prevent default form submission
     updateRecipe(updatedRecipe);
     // Handle successful update or display error message
+    alert('Recipe updated successfully!');
   };
 
   return (

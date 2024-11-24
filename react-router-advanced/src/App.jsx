@@ -40,6 +40,8 @@ function App() {
         <Route path="/profile" element={<Profile />}>
           <Route path="details" element={<ProfileDetails />} />
           <Route path="settings" element={<ProfileSettings />} />
+          <Route path="BlogPost" element={<ProfileSettings />} />
+          <Route path="/blog/:id" element={<ProfileSettings />} />
         </Route>
         <Route path="/post/:postId" element={<PostDetails />} />
       </Routes>

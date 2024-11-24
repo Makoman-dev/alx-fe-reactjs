@@ -11,3 +11,5 @@ const ProtectedRoute = ({ isAuthenticated }) => {
   {/* ... Nested routes */}
 </Route>
 };
+
+useAuth

@@ -72,3 +72,8 @@ const RegistrationForm = () => {
 };
 
 export default RegistrationForm;
+
+
+value={username}
+value={email}
+value={password}

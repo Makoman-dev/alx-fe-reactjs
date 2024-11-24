@@ -27,3 +27,7 @@ export default PostsComponent;
 
 isError 
 fetchPosts
+cacheTime
+staleTime 
+refetchOnWindowFocus
+keepPreviousData

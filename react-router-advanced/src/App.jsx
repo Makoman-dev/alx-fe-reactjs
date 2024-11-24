@@ -8,6 +8,7 @@ import Profile from './Profile';
 import ProfileDetails from './ProfileDetails';
 import ProfileSettings from './ProfileSettings';
 import PostDetails from './PostDetails';
+import PostDetails from './ProtectedRoute';
 
 function App() {
   const [count, setCount] = useState(0)

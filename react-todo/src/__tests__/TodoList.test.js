@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import fireEvent from '@testing-library/fire-event';
 import TodoList from   
  './TodoList';
 fireEvent
@@ -16,8 +16,8 @@ describe('TodoList', () => {
     const input = screen.getByPlaceholderText('Add a todo');
     const addButton = screen.getByRole('button', { name: 'Add' });
 
-    userEvent.type(input, 'Test Todo');
-    userEvent.click(addButton);
+    fireEvent.type(input, 'Test Todo');
+    fireEvent.click(addButton);
 
     await screen.findByText('Test Todo');
     const todoItems = screen.getAllByRole('listitem');
@@ -28,7 +28,7 @@ describe('TodoList', () => {
     render(<TodoList />);
     const firstCheckbox = screen.getByRole('checkbox');
 
-    userEvent.click(firstCheckbox);
+    fireEvent.click(firstCheckbox);
 
     await screen.findByText('Learn React', { exact: false, selector: 'span' });
     const firstTodo = screen.getAllByRole('listitem')[0];
@@ -39,7 +39,7 @@ describe('TodoList', () => {
     render(<TodoList />);
     const firstDeleteButton = screen.getByRole('button');
 
-    userEvent.click(firstDeleteButton);
+    fireEvent.click(firstDeleteButton);
 
     await screen.findByText('Build a Todo App');
     const todoItems = screen.getAllByRole('listitem');

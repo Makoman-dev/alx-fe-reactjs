@@ -39,7 +39,8 @@ const RegistrationForm = () => {
           type="text"
           id="username"
           name="username"
-          value={formData.username}
+          value={formData.username}   
+ // <-- Here's the value prop
           onChange={handleChange}
         />
       </div>
@@ -49,7 +50,8 @@ const RegistrationForm = () => {
           type="email"
           id="email"
           name="email"
-          value={formData.email}
+          value={formData.email}   
+ // <-- Here's the value prop
           onChange={handleChange}
         />
       </div>
@@ -59,9 +61,9 @@ const RegistrationForm = () => {
           type="password"
           id="password"
           name="password"
-          value={formData.password}
-          onChange={handleChange}   
-
+          value={formData.password}   
+ // <-- Here's the value prop
+          onChange={handleChange}
         />
       </div>
       <button type="submit">Register</button>
@@ -69,4 +71,4 @@ const RegistrationForm = () => {
   );
 };
 
-export default RegistrationForm;   
+export default RegistrationForm;

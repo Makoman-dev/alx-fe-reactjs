@@ -23,3 +23,7 @@ const PostsComponent = () => {
 };
 
 export default PostsComponent;
+
+
+isError 
+fetchPosts

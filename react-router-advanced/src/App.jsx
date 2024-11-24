@@ -2,6 +2,12 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import Profile from './Profile';
+import ProfileDetails from './ProfileDetails';
+import ProfileSettings from './ProfileSettings';
+import PostDetails from './PostDetails';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +34,16 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />}>
+          <Route path="details" element={<ProfileDetails />} />
+          <Route path="settings" element={<ProfileSettings />} />
+        </Route>
+        <Route path="/post/:postId" element={<PostDetails />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }

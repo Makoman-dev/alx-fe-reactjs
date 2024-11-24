@@ -11,3 +11,8 @@ function Profile() {
 }
 
 export default profile
+
+Routes
+Route
+ProfileDetails
+ProfileSettings
